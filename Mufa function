@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void muda (int n);
+void muda2 ();
+
+
+int main(){
+    
+    int n=5;
+    printf("\n n = %d antes da chamada de muda", n);
+    
+    muda (n);
+    printf("\n n = %d depois da chamada de muda", n);
+    n=5;
+    printf("\n n = %d depois da chamada de muda2", n);
+    muda2 (n);
+    printf("\n n = %d depois da chamada de muda2", n);
+}
+    
+    void muda(int n){
+        n=10;
+        printf("\n n = %d dentro da chamada de muda", n);
+        
+    }
+    
+    void muda2(){
+        int n=10;
+        printf("\n n = %d dentro da chamada de muda2", n);
+    }
