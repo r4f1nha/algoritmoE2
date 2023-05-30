@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+float saldoConta(float saldo){
+    
+    return saldo;
+}
+
+float deposito(float saldo, float valor){
+    
+    printf("Digite o valor a ser depositado: ");
+    scanf("%f",&valor);
+    
+    saldo+=valor;
+    
+    return saldo;
+}
+
+float saque(float saldo, float valor){
+
+    printf("Digite o valor a ser sacado: ");
+    scanf("%f",&valor);
+    
+    if(saldo >= valor) {saldo-=valor;
+        return saldo;
+        } else (saldo<0);  
+        printf("Saldo insuficiente, tente novamente!");
+           
+    
+   
+    
+}
+
+int main(){
+    float valor = 0;
+    float saldo = 0;
+    int opcao = 0;
+    
+    while(opcao != 4){
+    printf(" Digite a opcao: \n 1- Saldo \n 2- Deposito \n 3- Saque \n Opçao: ");
+    scanf("%d",&opcao);
+    
+    
+    //saldo
+    if(opcao == 1){
+        printf("O seu saldo e: %f \n", saldoConta(saldo));
+       
+    }
+    
+    //deposito
+    if(opcao == 2){
+        saldo+=deposito(saldo,valor);
+       
+    }
+
+    //saque
+    if(opcao == 3){
+        saldo-=saque(saldo,valor);
+        
+    }    
+        
+    //erro    
+    if(opcao < 1 || opcao > 3){
+        printf("Opcao invalida! Digite uma opcao de 1 a 3\n");
+         }
+    
+    }
+    
+    return 0;
+}
