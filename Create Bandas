@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_BANDAS 100
+
+typedef struct {
+    char nome[50];
+    char estilo[50];
+    int ranking;
+    int qtde;
+} Banda;
+
+void LeBanda(Banda *v, int qt) {
+    printf("== Cadastro de Bandas ==\n");
+    for (int i = 0; i < qt; i++) {
+        printf("Banda %d:\n", i+1);
+        printf("Nome: ");
+        scanf(" %[^\n]", v[i].nome);
+        printf("Estilo: ");
+        scanf(" %[^\n]", v[i].estilo);
+        printf("Ranking: ");
+        scanf("%d", &v[i].ranking);
+        printf("Quantidade de integrantes: ");
+        scanf("%d", &v[i].qtde);
+        printf("\n");
+    }
+}
+
+void exibeBanda(Banda *exib, int qt) {
+    printf("== Listagem de Bandas ==\n");
+    for (int i = 0; i < qt; i++) {
+        printf("Banda %d:\n", i+1);
+        printf("Nome: %s\n", exib[i].nome);
+        printf("Estilo: %s\n", exib[i].estilo);
+        printf("Ranking: %d\n", exib[i].ranking);
+        printf("Quantidade de integrantes: %d\n", exib[i].qtde);
+        printf("\n");
+    }
+}
+
+void procuraBandaEstilo(Banda *busca, int qt) {
+    char estilo[50];
+    printf("== Busca de Bandas por Estilo ==\n");
+    printf("Informe o estilo musical: ");
+    scanf(" %[^\n]", estilo);
+    printf("Resultado da busca:\n");
+    int encontrou = 0;
+    for (int i = 0; i < qt; i++) {
+        if (strcmp(busca[i].estilo, estilo) == 0) {
+            printf("Nome: %s\n", busca[i].nome);
+            printf("Ranking: %d\n", busca[i].ranking);
+            printf("\n");
+            encontrou = 1;
+        }
+    }
+    if (!encontrou) {
+        printf("Nenhuma banda encontrada com o estilo %s\n\n", estilo);
+    }
+}
+
+void menu() {
+    printf("== Menu de Opcoes ==\n");
+    printf("1 - Cadastrar Bandas\n");
+    printf("2 - Listar Todas as Bandas\n");
+    printf("3 - Buscar Bandas por Estilo\n");
+    printf("4 - Sair\n");
+    printf("Informe a opcao desejada: ");
+}
+
+int main() {
+    Banda bandas[MAX_BANDAS];
+    int qt_bandas = 0;
+    int opcao;
+    do {
+        menu();
+        scanf("%d", &opcao);
+        switch (opcao) {
+            case 1:
+                printf("Informe a quantidade de bandas a serem cadastradas: ");
+                scanf("%d", &qt_bandas);
+                LeBanda(bandas, qt_bandas);
+                break;
+            case 2:
+                exibeBanda(bandas, qt_bandas);
+                break;
+            case 3:
+                procuraBandaEstilo(bandas, qt_bandas);
+                break;
+            
+            case 4:
+                printf("Saindo do programa...");
+                break;
+            default:
+                printf("Opcao invalida.\n\n");
+                break;
+        }
+    } while(opcao != 4);
+return 0;
+}
