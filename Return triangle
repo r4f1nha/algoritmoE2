@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int leia()  {
+  int lado;
+
+    printf("Digite o lado do triângulo: ");
+    scanf("%d", &lado);
+    while(lado<=0) {
+        printf("Numero invalido, digite novamente");
+        scanf("%d",&lado);
+    }
+}
+
+
+// função que verifica se os lados formam um triângulo
+int formaTriangulo(int a, int b, int c) {
+    if (a + b > c && a + c > b && b + c > a) {
+        return 1; // retorna 1 se os lados formarem um triângulo
+    } else {
+        return 0; // retorna 0 se os lados não formarem um triângulo
+    }
+}
+
+// função que determina o tipo de triângulo
+void tipoTriangulo(int a, int b, int c) {
+    if (a == b && a == c) {
+        printf("O triângulo é equilátero.\n");
+    } else if (a == b || a == c || b == c) {
+        printf("O triângulo é isósceles.\n");
+    } else {
+        printf("O triângulo é escaleno.\n");
+    }
+}
+
+// função principal
+int main() {
+    
+  int  a=leia();
+  int  b=leia();
+  int  c=leia();
+    
+
+    if (formaTriangulo(a, b, c)) {
+        printf("Os lados formam um triângulo.\n");
+        tipoTriangulo(a, b, c);
+    } else {
+        printf("Os lados não formam um triângulo.\n");
+    }
+
+    return 0;
+}
