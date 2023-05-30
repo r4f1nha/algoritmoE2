@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+
+void desenha(int x) {
+  for (int i=1;i<=x;i++) {
+      printf("*");
+  }
+}
+int main()
+{
+    int x=2;
+    
+    printf("Desenho: "); desenha(x);
+
+    return 0;
+}
