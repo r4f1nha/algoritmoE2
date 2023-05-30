@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+float divisao(int a, int b) {
+  do {  return a*1.0/b;
+  } 
+  while(b>=0);
+}
+int main()
+{
+    int a=12, b=6;
+    
+        printf("a dividido por b= %f", divisao(a,b));
+  return 0;  
+     }
