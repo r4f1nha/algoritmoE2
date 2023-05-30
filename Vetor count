@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define TAM 10
+int main()
+{
+    int i, total;
+    int v[TAM];
+
+if (v[TAM]),total=0;
+
+for (int i=0;i<TAM,i++) {
+    printf("Digite um valor v[%d]: ",i);
+    scanf("%d",&v[i]); }
+    
+    for (int i=0;i<TAM;i++) {
+        if((v[i])%2==0)) total++;
+    }
+    printf("\nQuantidade de pares=%d",total);
+}
+
+
+
+    return 0;
+}
