@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int retornaPosicao (int a, int b, int c) {
+    int posi=1;
+    if(b>a&&b>c) 
+        posi=2; 
+    if(c>a&&c>b) 
+        posi=3; 
+    
+    return posi;
+    
+}
+
+
+
+
+int main()
+{
+    int a, b, c;
+    printf("Digite a: ");
+    scanf("%d", &a);
+    
+    printf("Digite b: ");
+    scanf("%d", &b);
+    
+    printf("Digite c: ");
+    scanf("%d", &c);
+
+    printf("O maior está na posiçao= %d" , retornaPosicao);
+
+    return 0;
+}
