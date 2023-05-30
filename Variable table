@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int x, y, z;
+    
+    
+    printf("Digite x: ");
+    scanf("%d", &x);
+    
+     printf("Digite y: ");
+    scanf("%d", &y);
+    
+z=(x*y)+5; 
+    
+      
+    if(z<=0)  {  printf("A variavel de z é: A"); } 
+    else if((z>0)&&(z<=100)) {   printf("A variavel de z é: B"); }   
+    else if(z>100) {   printf("A variavel de z é: c"); }      
+    
+    
+      return 0;
+}
