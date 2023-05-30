@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{ 
+    //entradas
+   int vendas;
+   float carro, fixo, comissao, total;
+   printf("Digite o salario fixo");
+   scanf("%e", &fixo);
+   printf("Digite o total de vendas: ");
+   scanf("%d", &vendas);
+   printf("Digite o valor do carro: ");
+   scanf("%e", &carro);
+     comissao=carro*(0,05);    
+     total= ((comissao*vendas)*(0,05))+fixo;
+     printf("Total salario: %.1f", total);
+     
+    return 0;
+}
