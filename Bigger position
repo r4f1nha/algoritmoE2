@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+void main()
+{
+    /*
+int a,b,c,maior;
+
+//Entrada
+scanf("%d %d %d", &a, &b, &c);
+
+//saída
+maior = a;
+if(b>maior) maior=b;
+if(c>maior) maior=c;
+
+printf("maior = %d", maior);
+
+void main()
+{ */
+int d,e,f,maior1,posicao;
+
+//Entrada
+scanf("%d %d %d", &d, &e, &f);
+
+//saída
+maior1 = d;
+posicao=1;
+if(e>maior1) maior1=e; posicao=2;
+if(f>maior1) maior1=f; posicao=3;
+
+printf("maior1 = %d posicao=%d", maior1,posicao);
+
+
+}
