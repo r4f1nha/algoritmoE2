@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void estaEntre(char caracter){
+    if(caracter > 65 && caracter < 122){
+        printf("o caracter esta entre A e Z");
+    }else{
+        printf("O caracter não esta entre A e Z");
+    }
+}
+
+int main() {
+ 
+    int caracter=76;
+    
+   estaEntre(caracter);
+}
