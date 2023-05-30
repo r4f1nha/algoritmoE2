@@ -1,0 +1,21 @@
+área de um círculo
+
+#include <stdio.h>
+#define pi 3.1415
+
+float area(int r) {
+    
+       return pi*(r*r);
+   
+}
+
+
+int main(){
+   float r;
+    printf("Digite o valor do raio da circunferência: ");
+    scanf("%f", &r);
+    
+    printf("O valor da area é= %f", area(r));
+    
+    return 0;
+}
