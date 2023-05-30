@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    float salarioFixo, venda, comissao, salarioFinal;
+    double com1, com2;
+    com1=0.03;
+    com2=0.05;
+    
+    printf ("Digite o valor do salario fixo: ");
+    scanf ("%f",&salarioFixo);
+    printf ("Digite o valor da venda: ");
+    scanf ("%f",&venda );
+    
+    salarioFinal=salarioFixo+(venda*com1);
+    comissao=salarioFixo+(venda*com2);
+    
+    if(venda<=1500) {
+        printf("Salario final de: %.2f", salarioFinal);
+    } else if (venda>1500) {
+        printf("Salario final de: %.2f", comissao);
+    }
+    
+    
+    
+    return 0;
+}
