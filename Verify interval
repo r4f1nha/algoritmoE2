@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int verificaIntervalo (int x, int min, int max) {
+    // Coloque sua lógica aqui !
+    return(x>=min&&x<=max);
+ 
+}
+
+int main()
+{
+    int x, min, max;
+    printf("Digite x: ");   scanf ("%d", &x);
+    printf("Digite min: "); scanf ("%d", &min);
+    printf("Digite max: "); scanf ("%d", &max);
+
+    if (verificaIntervalo (x,min,max)==1 )
+        printf ("\nEstá no intervalo");
+    else 
+        printf ("\nNAO Está no intervalo");
+    
+    return 0;
+}
